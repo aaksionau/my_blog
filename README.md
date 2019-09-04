@@ -1,6 +1,6 @@
 # My blog
 
-This is code for my site with blog, cv and contacts.
+This is code for my site with blog, cv, projects and contacts.
 
 Website is built on top of Django/Python.
 
