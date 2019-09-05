@@ -22,6 +22,7 @@ class Post(models.Model):
     author = models.ForeignKey(User,
                                on_delete=models.CASCADE,
                                related_name='blog_posts')
+    front_image = models.ImageField(upload_to='posts')
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
