@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'a2blog.apps.A2BlogConfig',
+    'taggit',
 ]
 
 MIDDLEWARE = [
