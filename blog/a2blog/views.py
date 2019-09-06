@@ -15,6 +15,16 @@ class PostListView(ListView):
     template_name = 'a2blog/post/list.html'
 
 
+class PostFilteredListView(ListView):
+    context_object_name = 'posts'
+    paginate_by = 5
+    template_name = 'a2blog/post/list.html'
+
+    def get_queryset(self):
+        tag = get_object_or_404(Tag, slug=self.kwargs['tag'])
+        return Post.published.filter(tags__in=[tag])
+
+
 def post_detail(request, year, month, day, post):
     post = get_object_or_404(Post, slug=post,
                              status='published',
