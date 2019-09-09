@@ -1,4 +1,5 @@
 {% extends "a2blog/base.html" %}
+{% load a2blog_tags %}
 
 {% block title %}
     My blog
@@ -20,7 +21,7 @@
         </p>
         <p class="date">Published {{post.publish}} by {{post.author}}</p>
 
-        {{post.body|truncatewords:100|linebreaks}}
+        {{post.body|markdown|truncatewords_html:50}}
     {% endfor %}
 
 {% include "a2blog/pagination.html" with page=page_obj %}

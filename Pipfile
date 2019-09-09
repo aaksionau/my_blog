@@ -12,6 +12,7 @@ rope = "*"
 django = "*"
 pillow = "*"
 django-taggit = "*"
+markdown = "*"
 
 [requires]
 python_version = "3.7"
