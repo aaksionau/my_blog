@@ -13,6 +13,8 @@ django = "*"
 pillow = "*"
 django-taggit = "*"
 markdown = "*"
+psycopg2 = "*"
+python-decouple = "*"
 
 [requires]
 python_version = "3.7"
